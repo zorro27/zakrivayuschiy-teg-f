@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -10,10 +11,17 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
+      <a href="#" class="header__logo">&lt;/html&gt;</a>
+      <h1 class="header__title">Закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -40,7 +48,23 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main class="main">
+      <article class="card">
+        <h2 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <div class="card__image">
+          <span class="card__image-title">&lt;/HTML&gt;</span>
+          <picture>
+            <img
+              class="card__image-item normal"
+              src="./images/truck.png"
+              alt="Машинка в нормальном исполнении на фиолетовом фоне"
+              loading="lazy">
+          </picture>
+        </div>
+      </article>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

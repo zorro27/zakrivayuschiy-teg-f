@@ -17,4 +17,70 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: url(../images/background.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-title);
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid currentColor;
+  background-color: var(--backgroud-color, #fff);
+  font-family: var(--accent-font-family, "PressStart2P-Regular", fantasy);
+  max-inline-size: 700px;
+}
+
+.header__logo {
+  margin: 100px auto 20px;
+  font-size: 49px;
+  text-decoration: none;
+}
+
+.header__logo:focus-visible {
+  outline: none;
+}
+
+.header__title {
+  font-size: 14px;
+  margin: 20px auto 25px;
+}
+
+.header__title:focus {
+  outline: none;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.header__theme-menu {
+  margin-block: 25px;
+}
+
+.theme-menu__button{
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.card__image-item{
+  width: 200px;
+  height: 200px;
 }
