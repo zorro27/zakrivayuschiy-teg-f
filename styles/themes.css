@@ -6,8 +6,9 @@
 */
 
 :root.theme-dark {
-  --backgroud-color: #000;
+  --background-color: #000;
   --accent-color: #00cc14;
+  --button-color-title: #00cc14;
   --background-linear: repeating-linear-gradient(
     90deg,
     black 0px 2px,
@@ -18,7 +19,7 @@
 }
 
 :root.theme-light {
-  --backgroud-color: #fff;
+  --background-color: #fff;
   --accent-color: #000;
   --background-linear: repeating-linear-gradient(
       90deg,
