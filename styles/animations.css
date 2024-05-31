@@ -14,9 +14,11 @@
 */
 
 @keyframes moving {
-  from { transform: translateX(0); 
+  from { 
+    transform: translateX(0); 
   }
-  to { transform: translateX(4px); 
+  to { 
+    transform: translateX(4px); 
   }
 }
 

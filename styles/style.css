@@ -18,7 +18,7 @@
   min-inline-size: 375px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
-  color: var(--accent-color, #000);
+  color: var(--accent-color);
   background: var(--background-linear);
   background-position: center;
   background-size: cover;
@@ -34,7 +34,7 @@
   margin: 100px auto;
   text-transform: uppercase;
   border: 2px solid currentColor;
-  background-color: var(--background-color, #fff);
+  background-color: var(--background-color);
   font-family: var(--accent-font-family, "PressStart2P-Regular", fantasy);
   max-inline-size: 700px;
 }
@@ -108,7 +108,7 @@
   content: "▶";
   position: absolute;
   display: block;
-  color: var(--accent-color, #000);
+  color: var(--accent-color);
   animation: moving 0.5s infinite ease-in-out alternate;
   block-size: 14px;
   inline-size: 14px;
@@ -118,7 +118,7 @@
 
 .card {
   border: 2px solid currentColor;
-  background-color: var(--background-color, #fff);
+  background-color: var(--background-color);
   margin-block-end: 50px;
 }
 
@@ -145,10 +145,17 @@
   inset-block-start: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   inset-inline-end: clamp(1.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   font-family: var(--accent-font);
-  text-shadow: -1px 0 var(--background-color, #fff),
-  0 1px var(--background-color, #fff), 1px 0 var(--background-color, #fff),
-  0 -1px var(--background-color, #fff);
+  text-shadow: -1px 0 var(--background-color,),
+  0 1px var(--background-color);
   opacity: 0.5;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card__image-title {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
 }
 
 .card__content {
@@ -157,7 +164,7 @@
   padding-block: 25px;
 }
 
-.card__content-text:not(:last-of-type){
+.card__content-text:not(:last-of-type) {
   margin-block-end: 27px;
 }
 
@@ -188,7 +195,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--accent-color, #000);
+  background-color: var(--accent-color);
   transition: inline-size 0.5s ease-in-out;
   block-size: 100%;
   inline-size: 0;
@@ -203,7 +210,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color, #000);
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .card__like-button {
@@ -217,7 +224,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color, #000);
+  outline: 2px solid var(--accent-color);
 }
 
 .button__text {
@@ -241,20 +248,12 @@
   inline-size: 40px;
 }
 
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
-}
-
 .like-icon {
   block-size: 100%;
   inline-size: 100%;
 }
 
-.footer{
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,8 +264,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--accent-color, #000);
-  background-color: var(--background-color, #fff);
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
   padding: 18.5px 20px;
   cursor: pointer;
   gap: 8px;
@@ -275,9 +274,6 @@
 @media (width <= 375px) {
   .save__button {
     flex-direction: column;
-  }
-  
-  .save__button {
     width: 312px;
     height: 84px;
   }
@@ -288,9 +284,9 @@
 }
 
 dialog {
-  border: 2px solid var(--accent-color, #000);
+  border: 2px solid var(--accent-color);
   padding: 0;
-  background-color: var(--background-color, #fff);
+  background-color: var(--background-color);
 }
 
 dialog::backdrop {
