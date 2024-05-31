@@ -19,3 +19,76 @@
   to { transform: translateX(4px); 
   }
 }
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.contour {
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--like-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--like-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--like-color);
+  transition: fill 0.3s linear 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--like-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--like-color);
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center center;
+  animation: scaleHeart 0.3s ease-in 0.1s 2 alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: rays 0.3s ease-in 0.3s 2 alternate;
+}
+
+@keyframes scaleHeart {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes rays {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--like-color);
+  }
+}

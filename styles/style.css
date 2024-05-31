@@ -15,8 +15,9 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
+  max-inline-size: 700px;
   color: var(--accent-color, #000);
   background: var(--background-linear);
   background-position: center;
@@ -118,6 +119,7 @@
 .card {
   border: 2px solid currentColor;
   background-color: var(--background-color, #fff);
+  margin-block-end: 50px;
 }
 
 .card__title {
@@ -142,6 +144,7 @@
   z-index: 1;
   inset-block-start: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   inset-inline-end: clamp(1.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  font-family: var(--accent-font);
   text-shadow: -1px 0 var(--background-color, #fff),
   0 1px var(--background-color, #fff), 1px 0 var(--background-color, #fff),
   0 -1px var(--background-color, #fff);
@@ -195,20 +198,32 @@
   inline-size: 100%;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+}
+
 .card__like-button {
   min-inline-size: 130px;
   padding: 10px 0;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color, #000);
 }
 
 .button__text {
   display: block;
   color: var(--button-color-title);
   mix-blend-mode: difference;
-}
-
-.card__icon-button,
-.button {
-  cursor: pointer;
 }
 
 .card__icon-button {
@@ -237,4 +252,109 @@
 .like-icon {
   block-size: 100%;
   inline-size: 100%;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 102px;
+}
+
+.save__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--accent-color, #000);
+  background-color: var(--background-color, #fff);
+  padding: 18.5px 20px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+@media (width <= 375px) {
+  .save__button {
+    flex-direction: column;
+  }
+  
+  .save__button {
+    width: 312px;
+    height: 84px;
+  }
+}
+
+.save__button span {
+  text-wrap: nowrap;
+}
+
+dialog {
+  border: 2px solid var(--accent-color, #000);
+  padding: 0;
+  background-color: var(--background-color, #fff);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.save__dialoge-wrapper {
+  padding: 30px 42px;
+  max-inline-size: 357px;
+}
+
+.save__dialoge-content {
+  display: flex;
+  gap: 12px;
+  margin-block-end: 30px;
+}
+
+.save__icon {
+  inline-size: 21px;
+  block-size: clamp(21px, 1.905rem + -0.6573vw, 28px);
+}
+
+.save__dialog-svg {
+  min-inline-size: 39px;
+  min-block-size: 39px;
+}
+
+.save__dialog-text {
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-size: 13px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.save__dialog-button {
+  inline-size: 100%;
+  text-transform: uppercase;
+}
+
+.filter-one {
+  filter: grayscale(0.5) contrast(1.4);
+}
+
+.filter-two {
+  filter: saturate(2);
+}
+
+.filter-three {
+  filter: hue-rotate(20deg) contrast(0.9);
+}
+
+.filter-four {
+  filter: invert(0.8);
+}
+
+.filter-five {
+  filter: sepia(1.5);
+}
+
+.filter-sixe {
+  filter: blur(10px);
+}
+
+.filter-seven {
+  filter: blur(3px) hue-rotate(100deg) contrast(0.5);
 }
